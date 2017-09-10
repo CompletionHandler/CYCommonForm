@@ -64,13 +64,12 @@
     [self.leftTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView.mas_centerY);
         make.left.equalTo(self.contentView.mas_left).offset(CYLeftMargin);
-        make.width.equalTo(@10).priorityMedium();
     }];
     
     [self.indicatorLeftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView.mas_centerY);
         make.right.equalTo(self.contentView.mas_right).offset(-CYRightMargin);
-        make.left.lessThanOrEqualTo(self.leftTitleLabel.mas_right).offset(CYLeftMiddleMargin).priorityMedium();
+        make.left.greaterThanOrEqualTo(self.leftTitleLabel.mas_right).offset(CYLeftMiddleMargin).priorityMedium();
     }];
     
     [self.indicatorLeftTextField mas_makeConstraints:^(MASConstraintMaker *make) {
