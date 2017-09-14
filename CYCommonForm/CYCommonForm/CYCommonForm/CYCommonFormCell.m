@@ -73,7 +73,10 @@
     }];
     
     [self.indicatorLeftTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.indicatorLeftLabel);
+        make.centerY.equalTo(self.contentView.mas_centerY);
+        make.right.equalTo(self.contentView.mas_right).offset(-CYRightMargin);
+        make.left.greaterThanOrEqualTo(self.leftTitleLabel.mas_right).offset(CYLeftMiddleMargin).priorityMedium();
+        make.height.equalTo(self.contentView.mas_height);
     }];
 }
 
@@ -203,7 +206,10 @@
     }];
     
     [self.indicatorLeftTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.indicatorLeftLabel);
+        make.centerY.equalTo(self.contentView.mas_centerY);
+        make.right.equalTo(self.contentView.mas_right).offset(-CYRightMargin);
+        make.left.greaterThanOrEqualTo(self.leftTitleLabel.mas_right).offset(CYLeftMiddleMargin).priorityMedium();
+        make.height.equalTo(self.contentView.mas_height);
     }];
     
     [self.indicatorLeftImageView mas_makeConstraints:^(MASConstraintMaker *make) {
