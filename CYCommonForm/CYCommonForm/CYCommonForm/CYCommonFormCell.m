@@ -60,6 +60,7 @@
     
     self.indicatorLeftTextField.textAlignment = NSTextAlignmentRight;
     self.indicatorLeftLabel.textAlignment = NSTextAlignmentRight;
+    [self.leftTitleLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
     
     [self.leftTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView.mas_centerY);
@@ -187,6 +188,8 @@
     [self.contentView addSubview:self.indicatorLeftLabel];
     [self.contentView addSubview:self.indicatorLeftImageView];
     [self.contentView addSubview:self.indicatorArrow];
+    
+    [self.leftTitleLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
     
     [self.leftTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView.mas_centerY);
